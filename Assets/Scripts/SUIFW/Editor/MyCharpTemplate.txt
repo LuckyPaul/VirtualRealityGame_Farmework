@@ -1,0 +1,22 @@
+﻿/***
+ * 
+ *    Title: #ProjectName#
+ *           主题：       
+ *    Description: 
+ *           功能： 
+ *                  
+ *    Date: #CreateTime#
+ *    Version: 0.1版本
+ *    Modify Recoder: 
+ *    Author: #Author#
+ *   
+ */
+
+using UnityEngine;
+
+namespace #NAMESPACE# {
+	public class #SCRIPTNAME# : MonoBehaviour {
+
+    }
+}
+
