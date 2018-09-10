@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScenesMgr : MonoBehaviour {
 
-
+    public AsyncOperation asyncOperation;
     public delegate void OnLoadSceneAsyncOverCallBack(AsyncOperation asyncOperation);   //场景异步加载完成回调
 
     /// <summary>
@@ -48,7 +48,7 @@ public class ScenesMgr : MonoBehaviour {
     /// <param name="asyncOperation"></param>
     /// <param name="onLoadSceneAsyncOver"></param>
     /// <returns></returns>
-    public IEnumerator LoadAsync(string sceneName, AsyncOperation asyncOperation, OnLoadSceneAsyncOverCallBack onLoadSceneAsyncOverCallBack)
+    public IEnumerator LoadAsync(string sceneName, OnLoadSceneAsyncOverCallBack onLoadSceneAsyncOverCallBack)
     {
         if (UnityEngine.SceneManagement.SceneManager.GetSceneByName(sceneName) == null)
         {
@@ -69,7 +69,7 @@ public class ScenesMgr : MonoBehaviour {
     /// <param name="asyncOperation"></param>
     /// <param name="onLoadSceneAsyncOverCallBack"></param>
     /// <returns></returns>
-    public IEnumerator LoadAdditiveAsync(string sceneName, AsyncOperation asyncOperation, OnLoadSceneAsyncOverCallBack onLoadSceneAsyncOverCallBack)
+    public IEnumerator LoadAdditiveAsync(string sceneName, OnLoadSceneAsyncOverCallBack onLoadSceneAsyncOverCallBack)
     {
         if (UnityEngine.SceneManagement.SceneManager.GetSceneByName(sceneName) == null)
         {
