@@ -74,6 +74,7 @@ namespace Tesla {
             asyncOperation = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName);
             asyncOperation.allowSceneActivation = false;
             yield return asyncOperation;
+
             onLoadSceneAsyncOverCallBack(asyncOperation);
         }
 

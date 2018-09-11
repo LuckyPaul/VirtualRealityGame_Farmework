@@ -13,12 +13,12 @@ public class LodingPage : LPUIPage {
 
     public override void Active()
     {
-        this.transform.GetChild(0).GetComponent<Slider>().value = GameObject.Find("Controler").GetComponent<LoginSceneCtl>().mgr.asyncOperation.progress;
-        this.transform.GetChild(1).GetComponent<Text>().text = "页面载入进度" + GameObject.Find("Controler").GetComponent<LoginSceneCtl>().mgr.asyncOperation.progress * 100 + "%";
+        this.transform.GetChild(0).GetComponent<Slider>().value =ScenesMgr.Instance.asyncOperation.progress;
+        this.transform.GetChild(1).GetComponent<Text>().text = "页面载入进度" + ScenesMgr.Instance.asyncOperation.progress * 100 + "%";
 
-        if (GameObject.Find("Controler").GetComponent<LoginSceneCtl>().mgr.asyncOperation.progress > 0.89f)
+        if (ScenesMgr.Instance.asyncOperation.progress > 0.89f)
         {
-            GameObject.Find("Controler").GetComponent<LoginSceneCtl>().mgr.asyncOperation.allowSceneActivation = true;
+            ScenesMgr.Instance.asyncOperation.allowSceneActivation = true;
         }
     }
 
